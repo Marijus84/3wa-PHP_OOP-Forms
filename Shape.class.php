@@ -3,20 +3,23 @@
 /**
  *
  */
-class Shape 
+class Shape
 {
 
-  public $x;
-  public $y;
+  public $location;
   public $color;
   public $opacity;
 
 
-  public function setLocation($x, $y)
-  {
-    $this->x = $x;
-    $this->y = $y;
+  public function __construct(){
+    $this->location = new Point();
+    $this->color = 'black';
+    $this->opacity = 1;
+
   }
+
+
+
 public function setColor($color)
   {
     $this->color = $color;

@@ -13,13 +13,15 @@ error_reporting(E_ALL|E_STRICT);
 
 
 
-
+include 'Point.class.php';
 include 'Shape.class.php';
 include 'Rectangle.class.php';
-include 'Circle.class.php';
+include 'Square.class.php';
+include 'Text.class.php';
 include 'Polygon.class.php';
+include 'Path.class.php';
 include 'Elipse.class.php';
-
+include 'Circle.class.php';
 include 'Program.class.php';
 include 'index.view.php';
 

@@ -14,17 +14,21 @@
 
 
     <div class="container">
-      <svg width="650" height="400">
-        <rect width="200" height="100" style="fill:#B22222;stroke-width:3;"  />
+      <svg width="650" height="600">
+        <rect width="200" height="100" transform="translate(50) rotate(45 50 50)" style="fill:#B22222;stroke-width:3;"  />
         <rect x="320" y="125" width="100" height="100" style="fill:#85DAFF;" opacity = "0.75" />
-        <circle cx="250" cy="180" r="150"  style="fill:#FFF3AB;" opacity = "0.75" />
-        <ellipse cx="550" cy="140" rx="60" ry="90" style="fill:#2E8A57;"/>
+        <circle cx="250" cy="180" r="150"  style="fill:#FFF3AB;" opacity = "0.75">
+        <animate attributeName="cx" from="150" to="350" dur="5s" repeatCount="indefinite" /></circle>
+        <ellipse cx="550" cy="140" rx="60" ry="90"  style="fill:#2E8A57;"/>
+        <path d="M80 250 L230 400 L230 600 L80 450 Z"stroke="white" stroke-width="1" />
+        <path d="M230 400 L380 250 L380 450 L230 600 Z"style="fill:grey" stroke="white" stroke-width="1" />
+        <path d="M80 250 L230 100 L380 250 L230 400  Z" style="fill:lightgrey" stroke="white" stroke-width="1" />
         <polygon points="20 50 20 200 140 200" style="fill:#A040A1"; opacity = "0.85" />
 
       </svg>
       <?php
       $program = new Program();
-      $renderer = new SvgRenderer();
+      $renderer = new SvgRenderer(700, 700, 'white');
       $program->run($renderer);
       ?>
     </div>

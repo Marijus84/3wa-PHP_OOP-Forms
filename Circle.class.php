@@ -1,26 +1,18 @@
 <?php
 
 
-class Circle extends Shape
+class Circle extends Elipse
 {
 
-  public $radius;
 
 
   public function setRadius($radius)
   {
-    $this->radius = $radius;
+    $this->rx = $radius;
+    $this->ry = $radius;
   }
 
-  public function draw(SvgRenderer $renderer)
-  {
-    $renderer->drawCircle($this->x,
-                            $this->y,
-                            $this->radius,
-                            $this->color,
-                            $this->opacity);
 
-  }
 }
 
 
